@@ -108,6 +108,9 @@ resource "aws_cognito_identity_provider" "saml" {
     // changed:
     // https://github.com/terraform-providers/terraform-provider-aws/issues/4831
     SSORedirectBindingURI = var.saml_metadata_sso_redirect_binding_uri
+
+    # Including SLO as well because, at least for atlantis, it also comes up every time
+    SLORedirectBindingURI = var.saml_metadata_slo_redirect_binding_uri
   }
 
   attribute_mapping = {

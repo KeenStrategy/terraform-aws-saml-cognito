@@ -23,6 +23,11 @@ variable "saml_metadata_sso_redirect_binding_uri" {
   description = "The HTTP-Redirect SSO binding from the SAML metadata file. Must be kept in sync with saml_metadata_file_content!"
 }
 
+variable "saml_metadata_slo_redirect_binding_uri" {
+  type        = string
+  description = "The HTTP-Redirect SLO binding from the SAML metadata file. Must be kept in sync with saml_metadata_file_content!"
+}
+
 variable "relying_party_dns_names" {
   type        = list(string)
   description = "List of DNS names for the relying parties (i.e. the applications you are authenticating with this)"
